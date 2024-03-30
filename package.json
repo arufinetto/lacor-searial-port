@@ -1,0 +1,24 @@
+{
+  "name": "lacor-serial-port",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arufinetto/lacor-searial-port.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arufinetto/lacor-searial-port/issues"
+  },
+  "homepage": "https://github.com/arufinetto/lacor-searial-port#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "node-rest-client": "^3.1.1",
+    "serialport": "^12.0.0"
+  }
+}
