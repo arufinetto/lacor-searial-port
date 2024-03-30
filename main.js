@@ -29,15 +29,12 @@ mySerial.on('readable', async function() {
 		const data = await mySerial.read(2465)
 		if(data != null){
 	
-            (async (data) => {
                 // POST request example
                 const newPost = {
                     result : data.toString()
                 };
                 const createdPost = await client.post('/save-result/counter19', newPost);
                 console.log('POST /posts:', createdPost);
-            })();
-
 		
 		}
 	} catch (error) {
