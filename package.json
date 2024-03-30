@@ -18,7 +18,8 @@
   "homepage": "https://github.com/arufinetto/lacor-searial-port#readme",
   "dependencies": {
     "axios": "^1.6.8",
+    "express": "^4.19.2",
     "node-rest-client": "^3.1.1",
-    "serialport": "^12.0.0"
+    "serialport": "^8.0.4"
   }
 }

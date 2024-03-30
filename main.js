@@ -1,5 +1,7 @@
 const SerialPort = require("serialport");
-const RestClient = require('./rest-client');
+const RestClient = require('./RestClient');
+var express  = require('express'),
+app=express() //inicializamos express
 
 const API_BASE_URL = 'http://192.168.1.13:3000/api';
 const client = new RestClient(API_BASE_URL);
@@ -17,7 +19,6 @@ const mySerial = new SerialPort(portWindows,{
 }, false)
 
 //const parser = new SerialPort.parsers.Readline()
-
 
 // when your serial port receives data, this event is fired
 // so you can capture the data and do what you need
@@ -44,5 +45,12 @@ mySerial.on('readable', async function() {
 	}
 	
 })
+
+app.set('port', process.env.PORT || 3002 );
+console.log(process.env.PORT)
+
+app.listen(app.get('port'),function(){
+	console.log("APP por el puerto 3002");
+ });
 
 
